@@ -1,0 +1,90 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.title{
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    max-width: 70%;
+    height: auto;
+    padding-left: 0;
+}
+@media (max-width: 768px) {
+    .logo img {
+        width: 70%;
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .logo img {
+        width: 40%;
+        height: auto;
+    }
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.servico-info {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #004c7f;
+}
