@@ -1,0 +1,297 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilos do header */
+header {
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-width: 70%; /* O logo ocupará no máximo 100% do espaço disponível */
+    height: auto; /* Mantém a proporção original do logo */
+    padding-left: 0;
+}
+@media (max-width: 768px) {
+    /* Estilos para telas menores */
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Estilos para telas médias */
+    .logo img {
+        width: 70%;
+        height: auto;
+    }
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    font-size: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #007bff;
+}
+
+@media (max-width: 768px){
+    .menu{
+        display: none; /* Oculta o menu de navegação padrão */
+        flex-direction: column; /* Empilha os itens de menu verticalmente */
+        gap: 10px;
+        text-align: center;
+        background-color: #ffffff; /* Adicione um plano de fundo para o menu de hambúrguer */
+        padding: 10px; /* Espaçamento interno para itens de menu */
+        transform: translateY(-10px); /* Comece um pouco acima */
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Adicione transições */
+        z-index: 1;
+    }
+    .menu.active {
+        display: flex; /* Exibe o menu de hambúrguer quando ativado */
+    }
+
+    .menu li {
+        font-size: auto;
+        text-align: center;
+    }
+
+    /* Adicione um ícone de menu */
+    .menu-icon {
+        font-size: 24px;
+        cursor: pointer;
+        position: ab;
+        top: 10px;
+        right: 10px;
+        color: #050505;
+        z-index: 2;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+/* Estilos do hero section */
+#hero {
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 100px 0;
+}
+
+#hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.icons{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.cta-button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .cta-button {
+        margin-top: 10px; /* Adicione uma margem superior */
+        display: block; /* Para que eles ocupem toda a largura disponível */
+        text-align: center; /* Centralize o texto */
+    }
+}
+
+
+/* Estilos das outras seções */
+section {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Estilos da lista de serviços*/
+.services-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre os cards */
+}
+
+.service-card {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* Distribui os cards em 3 colunas (ajuste conforme necessário) */
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.service a {
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+.service a:hover {
+    color: #004c7f;
+    text-decoration: underline;
+}
+
+.gallery-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.gallery-images {
+    max-width: 30%;
+    height: auto;
+}
+
+.gallery-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.prev-button, .next-button {
+    background-color: #004c7f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #0095da;
+}
+
+/* Estilos do contato */
+.contact-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilos do footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cell img,
+.address img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.cell a,
+.address a {
+    color: #fff !important;
+    text-decoration: none;
+    transition: color 0.3s ease !important; /* Adicione !important para priorizar a transição */
+}
+
+.cell a:hover,
+.address a:hover {
+    text-decoration: underline;
+    color: #007bff !important; /* Cor ao passar o mouse */
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu li {
+        font-size: 18px;
+        text-align: center;
+    }
+}
